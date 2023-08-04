@@ -232,7 +232,7 @@ Others:
 14. Topological Sort using Kahn's Algorithm(BFS + Queue + Indegree Array) - Leetcode 210(Course Schedule1)
 15. DSUF - Disjoint Set Union and Find - (Cycle Detection)
 16. DSRPC - Disjoint Set by Rank and Path Compression
-17. Maximum Bipartite Matching (Kuh's Algorithm)
+17. Maximum Bipartite Matching (Kuhn's Algorithm)
 
 ```
 

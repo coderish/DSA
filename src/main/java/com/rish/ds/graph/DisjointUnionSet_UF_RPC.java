@@ -31,15 +31,16 @@ class DisjointSet {
         }
     }
 
-    public int find(int x) {
-        if (parent[x] != x) {
-            return find(parent[x]);
+    public int find(int i) {
+        if (parent[i] != i) {
+            return find(parent[i]);
         }
-        return parent[x];
+        return parent[i];
     }
 
     public void union(int x, int y) {
-        int xRoot = find(x), yRoot = find(y);
+        int xRoot = find(x);
+        int yRoot = find(y);
         if (xRoot == yRoot) return;
 
         if (rank[xRoot] < rank[yRoot]) {
