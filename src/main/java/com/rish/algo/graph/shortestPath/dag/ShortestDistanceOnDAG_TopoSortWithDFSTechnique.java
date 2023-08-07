@@ -5,13 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-public class TopoSortWithDFS {
+public class ShortestDistanceOnDAG_TopoSortWithDFSTechnique {
     public static void main(String[] args) {
 //        int vertices = 6, edges = 7;
 //        int[][] edgeArr = {{0, 1, 2}, {0, 4, 1}, {4, 5, 4}, {4, 2, 2}, {1, 2, 3}, {2, 3, 6}, {5, 3, 1}};
         int vertices = 7, edges = 8;
         int[][] edgeArr = {{6, 4, 2}, {6, 5, 3}, {5, 4, 1}, {4, 0, 3}, {4, 2, 1}, {0, 1, 2}, {2, 3, 3}, {1, 3, 1}};
 
+        // 1. adjList
         List<List<Pair>> adjList = new ArrayList<>(vertices);
         for (int i = 0; i < vertices; i++) {
             adjList.add(new ArrayList<>());
@@ -21,11 +22,15 @@ public class TopoSortWithDFS {
         }
         System.out.println(adjList);
 
+        // 2. dfsStack
         Stack<Integer> dfsStack = new Stack<>();
         boolean[] vis = new boolean[vertices];
+        // Topological Sorting
         for (int i = 0; i < vertices; i++) {
             dfs(i, adjList, vis, dfsStack);
         }
+
+        // 3. dist[]
         int[] dist = new int[vertices];
         Arrays.fill(dist, Integer.MAX_VALUE);
 

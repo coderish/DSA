@@ -15,11 +15,11 @@ public class DijkstrasAlgo {
     private static int[] applyAlgorithm(int V, Map<Integer, List<List<Integer>>> adjNodeMap, int S) {
         Queue<DistToNodePair> pq = new PriorityQueue<>((x, y) -> x.distance - y.distance);
         int[] distArray = new int[V];
-        for (int i = 0; i < V; i++) distArray[i] = (int) (1e9);
+        Arrays.fill(distArray, (int) (1e9));
         distArray[S] = 0;
         pq.add(new DistToNodePair(0, S));
 
-        while (pq.size() != 0) {
+        while (!pq.isEmpty()) {
             int shortestDistToCurrentNode = pq.peek().distance;
             int currentNode = pq.peek().toNode;
             pq.remove();

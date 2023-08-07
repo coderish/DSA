@@ -20,3 +20,5 @@
 3. If parent (ultimate parent calculated after path compression technique) is the same, ignore the element and 
 iterate to the next edge element.
 4. After the iteration is complete, resultant DisjointSet is the MST.
+
+### Boruvka's (Also know as Sollen's) Algorithm

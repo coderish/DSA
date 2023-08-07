@@ -26,7 +26,7 @@ public class PrimsAlgo {
     static int findMST(Set<ConcreteEdge>[] adj, int verticesCount) {
         Set<ConcreteEdge> mst = new LinkedHashSet<>();
         int sum = 0;
-        boolean visited[] = new boolean[verticesCount];
+        boolean[] visited = new boolean[verticesCount];
         ConcreteEdge startingEdge = new ConcreteEdge(-1, 0, 0);
         Queue<ConcreteEdge> pq = new PriorityQueue<>(Comparator.comparingInt(node -> node.edgeWeight));
         pq.add(startingEdge);
