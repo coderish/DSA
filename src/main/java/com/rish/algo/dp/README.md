@@ -25,8 +25,8 @@ Types of Parent problems:
     - 0/1 Knapsack (6)
         Similar Problems:
         - 0/1 Knapsack
-        - Equal Subset Sum Partition
         - Subset Sum Problem
+        - Equal Subset Sum Partition
         - Count of Subset sum with a given sum
         - Minimum Subset Sum Difference
         - Count of Subset sum with a given difference
